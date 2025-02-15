@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(33, 33, 41);
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 120px;
+}
+
+#navbar {
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    width: 100%;
+    background-color: rgb(33, 33, 41);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 2rem;
+}
+
+#about a h3, #work a h3 {
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    font-family: "Press Start 2P", serif;
+    font-style: normal;
+    font-weight: 400;
+    background-color: rgb(33, 33, 41);
+    display: inline-block;
+}
+
+#about > a > h3:hover, #work > a > h3:hover {
+    text-decoration: none;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+#text-center {
+    width: 50%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: rgb(33, 33, 41);
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+#text-center p {
+    opacity: 0.8;
+    font-size: 1rem;
+    font-family: "Source Code Pro", serif;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid transparent;
+    width: 0;
+    color: #ffffff;
+    animation: typing 2s steps(20,end) forwards, blink 0.9s infinite;
+    margin: 0.3rem 0;
+}
+
+#text-center a:hover {
+    text-decoration: none;
+    border-bottom: 4px solid rgb(94, 25, 255);
+}
+
+#run {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 2rem;
+}
+
+#side {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    font-family: "Source Code Pro", serif;
+    gap: 1rem;
+}
+
+#codewindow {
+    width: 45%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: rgb(33, 33, 41);
+}
+
+#terminal {
+    width: 100%;
+    height: 50%;
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    font-family: "Source Code Pro", serif;
+    padding: 1rem;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(33, 33, 41);
+}
+
+@media screen and (max-width: 1024px) {
+    #text-center, #codewindow {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    #terminal {
+        height: 250px;
+    }
+
+    #side {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #main {
+        padding-top: 100px;
+    }
+
+    #navbar {
+        padding: 15px;
+    }
+
+    #about a h3, #work a h3 {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    #text-center {
+        padding: 1rem;
+    }
+
+    #text-center p {
+        font-size: 0.9rem;
+    }
+
+    #run {
+        margin-top: 1.5rem;
+    }
+
+    #side {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #terminal {
+        height: 200px;
+    }
+}
+@media screen and (max-width: 480px) {
+    #main {
+        padding-top: 80px;
+    }
+
+    #navbar {
+        padding: 10px;
+        gap: 1rem;
+    }
+
+    #about a h3, #work a h3 {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+
+    #text-center p {
+        font-size: 0.8rem;
+    }
+
+    #terminal {
+        height: 150px;
+    }
+}
